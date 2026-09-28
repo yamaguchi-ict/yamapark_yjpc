@@ -109,8 +109,7 @@ section{padding:clamp(56px,8vw,96px) 0}
 }
 .stage:last-of-type{margin-bottom:0}
 .stage.alt .thumb{order:2}
-.stage.alt .meta{order:1;text-align:right}
-.stage.alt .meta .desc{margin-left:auto}
+.stage.alt .meta{order:1}
 .thumb{position:relative;max-width:470px}
 .frame{border:3px solid var(--ink);border-radius:22px;overflow:hidden;box-shadow:9px 9px 0 var(--ink);background:#fff;aspect-ratio:4/3;position:relative}
 .frame img{width:100%;height:100%;object-fit:cover}
@@ -120,20 +119,14 @@ section{padding:clamp(56px,8vw,96px) 0}
 .stage.alt .buddy{right:auto;left:-16px}
 @media (prefers-reduced-motion:reduce){.buddy{animation:none}}
 .meta .num{font-family:var(--font-pixel);font-size:.84rem;letter-spacing:.2em;color:var(--pk2)}
-.meta h3{font-family:var(--font-display);font-size:clamp(1.7rem,4.6vw,2.35rem);margin:8px 0 6px;line-height:1.15}
-.tag{display:inline-block;margin-bottom:10px;font-family:var(--font-pixel);font-size:.72rem;letter-spacing:.05em;background:var(--yel);color:var(--ink);border:2px solid var(--ink);border-radius:999px;padding:4px 12px}
-.meta .desc{color:var(--ink2);font-size:.92rem;max-width:520px}
-.meta .creator{margin-top:16px;display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.meta h3{font-family:var(--font-display);font-size:clamp(1.7rem,4.6vw,2.35rem);margin:4px 0 8px;line-height:1.15}
+.tag{display:inline-block;margin-bottom:12px;font-family:var(--font-pixel);font-size:.72rem;letter-spacing:.05em;background:var(--yel);color:var(--ink);border:2px solid var(--ink);border-radius:999px;padding:4px 12px}
+.meta .desc{color:var(--ink2);font-size:.92rem;max-width:520px;margin-bottom:18px}
+.meta .creator{margin-top:16px;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
 .meta .creator .name{font-family:var(--font-display);font-weight:700;font-size:.9rem;color:var(--ink);text-decoration:none;border-bottom:2px dashed var(--ink3)}
 .meta .creator .name:hover{color:var(--pk2);border-color:var(--pk2)}
 .play-btn{font-family:var(--font-display);font-weight:900;font-size:.85rem;background:var(--ink);color:#fff;border:2px solid var(--ink);border-radius:999px;padding:10px 22px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:transform .15s ease,background .15s ease;box-shadow:0 3px 0 rgba(0,0,0,.0)}
 .play-btn:hover{background:var(--pk2);transform:translateY(-2px)}
-@media (max-width:840px){
-  .stage,.stage.alt{grid-template-columns:1fr;gap:18px}
-  .stage.alt .thumb{order:1}.stage.alt .meta{order:2;text-align:left}
-  .stage.alt .meta .desc{margin-left:0}
-  .buddy,.stage.alt .buddy{right:-10px;bottom:-24px;left:auto;width:80px;height:80px}
-}
 
 /* ゲート */
 .gate{margin-top:70px;background:linear-gradient(135deg,var(--pk1),var(--ora));border:2px solid var(--ink);border-radius:22px;padding:34px 24px;text-align:center;color:#fff;box-shadow:8px 8px 0 var(--ink);position:relative;overflow:hidden}
@@ -264,7 +257,7 @@ footer .trademark{margin-top:14px;font-size:.72rem;color:rgba(255,255,255,.62);m
 }
 
 /* ---- スマホ共通(ステージカード 1カラム化 + 装飾のはみ出し抑制) ---- */
-@media (max-width:760px){
+@media (max-width:840px){
   /* ナビ(ハンバーガー)*/
   .nav-toggle{display:flex}
   nav .links{
